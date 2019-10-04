@@ -28,7 +28,7 @@ var (
 func (u Unit) EndOf(date time.Time, endOfWeek time.Weekday) time.Time {
 	switch u {
 	case Second:
-		return date
+		return time.Date(date.Year(), date.Month(), date.Day(), date.Hour(), date.Minute(), date.Second(), 999999999, date.Location())
 	case Minute:
 		return time.Date(date.Year(), date.Month(), date.Day(), date.Hour(), date.Minute(), 59, 999999999, date.Location())
 	case Hour:
