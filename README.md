@@ -1,4 +1,4 @@
-# jmattheis/go-timemath
+# jmattheis/go-timemath [![Build Status][travis-badge]][travis] [![codecov][codecov-badge]][codecov]
 
 This package contains a parser for relative times like `now-1d` or `now/d` (start of day) similar to the
 ranges in [Grafana](https://grafana.com/docs/reference/timerange/). It also has convenient helper functions for time math.
@@ -66,3 +66,9 @@ func main() {
 | w        | week      |
 | M        | month     |
 | y        | year      |
+
+ [travis-badge]: https://travis-ci.org/jmattheis/go-timemath.svg?branch=master
+ [travis]: https://travis-ci.org/jmattheis/go-timemath
+ [codecov-badge]: https://codecov.io/gh/jmattheis/go-timemath/branch/master/graph/badge.svg
+ [codecov]: https://codecov.io/gh/jmattheis/go-timemath
+ 
