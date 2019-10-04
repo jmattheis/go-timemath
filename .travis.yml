@@ -1,0 +1,14 @@
+language: go
+go: 
+  - "1.13.1"
+
+install:
+  - make download-tools
+  - make install
+
+script:
+  - make test
+  - make lint
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
