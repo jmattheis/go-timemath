@@ -24,6 +24,16 @@ var (
 	Second Unit = 's'
 )
 
+// Valid returns true if it is a valid unit
+func (u Unit) Valid() bool {
+	switch u {
+	case Second, Minute, Hour, Day, Week, Month, Year:
+		return true
+	default:
+		return false
+	}
+}
+
 // EndOf returns the end of the given unit.
 func (u Unit) EndOf(date time.Time, endOfWeek time.Weekday) time.Time {
 	switch u {
